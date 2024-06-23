@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Unhide App Drawer Options Menu Button</string>
+    <string name="app_description">Unhide the options menu button in app drawer with Android for Work</string>
+    <string name="xposed_description">@string/app_description</string>
 </resources>
