@@ -37,6 +37,7 @@ android {
 
 dependencies {
 
+    implementation(libs.kotlin.stdlib)
     compileOnly(libs.xposed)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
