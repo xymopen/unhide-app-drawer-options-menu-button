@@ -26,6 +26,7 @@ android {
 }
 
 dependencies {
+	compileOnly(libs.xposed)
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)
