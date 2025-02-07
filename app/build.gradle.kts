@@ -16,6 +16,12 @@ android {
 
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 	}
+	packaging {
+		resources {
+			merges += "META-INF/xposed/*"
+			excludes += "**"
+		}
+	}
 	compileOptions {
 		sourceCompatibility = JavaVersion.VERSION_1_8
 		targetCompatibility = JavaVersion.VERSION_1_8
@@ -26,6 +32,8 @@ android {
 }
 
 dependencies {
+	compileOnly(libs.libxposed.api)
+	implementation(libs.libxposed.service)
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)

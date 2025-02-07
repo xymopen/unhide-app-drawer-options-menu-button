@@ -19,3 +19,15 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-adaptresourcefilecontents META-INF/xposed/java_init.list
+-keep,allowobfuscation,allowoptimization public class * extends io.github.libxposed.api.XposedModule {
+    public <init>(...);
+    public void onPackageLoaded(...);
+    public void onSystemServerLoaded(...);
+}
+-keep,allowobfuscation,allowoptimization class * {
+    static * *(io.github.libxposed.api.XposedInterface$BeforeHookCallback);
+    static void *(io.github.libxposed.api.XposedInterface$AfterHookCallback);
+    static void *(io.github.libxposed.api.XposedInterface$AfterHookCallback, *);
+}
