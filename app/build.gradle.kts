@@ -34,6 +34,7 @@ android {
 dependencies {
 	compileOnly(libs.libxposed.api)
 	implementation(libs.libxposed.service)
+	compileOnly(libs.libxposed.compat)
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)

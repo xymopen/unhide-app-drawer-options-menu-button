@@ -21,13 +21,13 @@
 #-renamesourcefileattribute SourceFile
 
 -adaptresourcefilecontents META-INF/xposed/java_init.list
+-keepattributes RuntimeVisibleAnnotations
 -keep,allowobfuscation,allowoptimization public class * extends io.github.libxposed.api.XposedModule {
     public <init>(...);
     public void onPackageLoaded(...);
     public void onSystemServerLoaded(...);
 }
--keep,allowobfuscation,allowoptimization class * {
-    static * *(io.github.libxposed.api.XposedInterface$BeforeHookCallback);
-    static void *(io.github.libxposed.api.XposedInterface$AfterHookCallback);
-    static void *(io.github.libxposed.api.XposedInterface$AfterHookCallback, *);
+-keep,allowobfuscation,allowoptimization @io.github.libxposed.api.annotations.* class * {
+    @io.github.libxposed.api.annotations.BeforeInvocation <methods>;
+    @io.github.libxposed.api.annotations.AfterInvocation <methods>;
 }

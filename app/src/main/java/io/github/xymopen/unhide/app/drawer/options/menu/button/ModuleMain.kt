@@ -11,12 +11,16 @@ import io.github.libxposed.api.XposedInterface.AfterHookCallback
 import io.github.libxposed.api.XposedModule
 import io.github.libxposed.api.XposedModuleInterface.ModuleLoadedParam
 import io.github.libxposed.api.XposedModuleInterface.PackageLoadedParam
+import io.github.libxposed.api.annotations.AfterInvocation
+import io.github.libxposed.api.annotations.XposedHooker
 
 private lateinit var HomeSettingsSharedPreferences: Class<*>
 
+@XposedHooker
 class AllAppsHostLayout : XposedInterface.Hooker {
     companion object {
         @JvmStatic
+        @AfterInvocation
         fun after(callback: AfterHookCallback) {
             val thisObject = callback.thisObject!!
             val mOptionsMenuButtonField =
@@ -44,9 +48,11 @@ fun getHomescreenLockEnabled(callback: AfterHookCallback): Boolean {
     ) as Boolean
 }
 
+@XposedHooker
 class AllAppsHostOnPrepareOptionsMenu : XposedInterface.Hooker {
     companion object {
         @JvmStatic
+        @AfterInvocation
         fun after(callback: AfterHookCallback) {
             if (callback.result as Boolean) {
                 if (!getHomescreenLockEnabled(callback)) {
