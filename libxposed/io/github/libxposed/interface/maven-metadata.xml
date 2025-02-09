@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>io.github.libxposed</groupId>
+  <artifactId>interface</artifactId>
+  <versioning>
+    <latest>100-13-g496b76f</latest>
+    <release>100-13-g496b76f</release>
+    <versions>
+      <version>100-13-g496b76f</version>
+    </versions>
+  </versioning>
+</metadata>

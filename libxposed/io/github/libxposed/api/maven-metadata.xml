@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>io.github.libxposed</groupId>
+  <artifactId>api</artifactId>
+  <versioning>
+    <latest>100-32-gb896dbc</latest>
+    <release>100-32-gb896dbc</release>
+    <versions>
+      <version>100-32-gb896dbc</version>
+    </versions>
+  </versioning>
+</metadata>
