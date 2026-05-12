@@ -34,6 +34,7 @@ android {
 dependencies {
 	compileOnly(libs.libxposed.api)
 	implementation(libs.libxposed.service)
+	compileOnly("androidx.annotation:annotation:1.8.0")
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)
