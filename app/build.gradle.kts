@@ -5,12 +5,12 @@ plugins {
 
 android {
 	namespace = "io.github.xymopen.unhide.app.drawer.options.menu.button"
-	compileSdk = 34
+	compileSdk = 36
 
 	defaultConfig {
 		applicationId = "io.github.xymopen.unhide.app.drawer.options.menu.button"
 		minSdk = 27
-		targetSdk = 34
+		targetSdk = 36
 		versionCode = 1
 		versionName = "1.0"
 
@@ -34,7 +34,6 @@ android {
 dependencies {
 	compileOnly(libs.libxposed.api)
 	implementation(libs.libxposed.service)
-	compileOnly(libs.libxposed.compat)
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
 	androidTestImplementation(libs.androidx.espresso.core)

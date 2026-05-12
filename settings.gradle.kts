@@ -16,11 +16,6 @@ dependencyResolutionManagement {
 	repositories {
 		google()
 		mavenCentral()
-		maven { url = uri("file:./libxposed/")
-			content {
-				includeGroup("io.github.libxposed")
-			}
-		}
 	}
 }
 
